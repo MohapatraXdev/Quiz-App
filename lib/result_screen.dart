@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/data/questions.dart';
-import 'package:flutter_application_1/questions_summary.dart';
+import 'package:Quiz_App/data/questions.dart';
+import 'package:Quiz_App/questions_summary.dart';
 
 class ResultScreen extends StatelessWidget {
   const ResultScreen({super.key, required this.chosenAnswers, required this.restartQuiz});

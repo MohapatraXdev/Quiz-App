@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/answer_button.dart';
-import 'package:flutter_application_1/data/questions.dart';
+import 'package:Quiz_App/answer_button.dart';
+import 'package:Quiz_App/data/questions.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class QuestionScreen extends StatefulWidget {
@@ -18,20 +18,20 @@ class QuestionScreen extends StatefulWidget {
 }
 
 class _QuestionScreenState extends State<QuestionScreen> {
-  var currentQuestion = 0;
+  var currentQuestionIndex = 0;
 
   void answerQuestion(String selectedAnswer) {
     widget.onSelectAnswer(selectedAnswer);
     //  currentQuestion = currentQuestion + 1;  **  increment the currentQuestion value by 1
     //  currentQuestion+=1;                     **  shortcut method 1 to increment the value by 1
     setState(() {
-      currentQuestion++; //  **  shortcut method 2 to increment the value by 1
+      currentQuestionIndex++; //  **  shortcut method 2 to increment the value by 1
     });
   }
 
   @override
   Widget build(context) {
-    final currentQuestion = questions[0];
+    final currentQuestion = questions[currentQuestionIndex];
     return SizedBox(
         width: double.infinity,
         child: Container(
